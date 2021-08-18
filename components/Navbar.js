@@ -13,6 +13,11 @@ export const Navbar = () => {
             <a>about</a>
           </Link>
         </li>
+        <li>
+          <Link href="/products">
+            <a>products</a>
+          </Link>
+        </li>
       </ul>
     </nav>
   );

@@ -1,9 +1,10 @@
 import { Header } from "../components";
+import { Text } from "@chakra-ui/react";
 const About = () => {
   return (
     <>
       <Header title="About" />
-      <h3>About Page</h3>
+      <Text fontSize="2xl">About Page</Text>
     </>
   );
 };
