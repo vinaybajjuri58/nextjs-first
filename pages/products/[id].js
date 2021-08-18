@@ -1,6 +1,11 @@
-import { Product } from "../../components";
+import { Product, Header } from "../../components";
 const ProductPage = ({ productData }) => {
-  return <Product product={productData} />;
+  return (
+    <>
+      <Header title={productData.title} />
+      <Product product={productData} />
+    </>
+  );
 };
 
 export async function getServerSideProps(context) {
