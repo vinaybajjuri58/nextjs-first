@@ -18,6 +18,11 @@ export const Navbar = () => {
             <a>products</a>
           </Link>
         </li>
+        <li>
+          <Link href="/counter">
+            <a>counter</a>
+          </Link>
+        </li>
       </ul>
     </nav>
   );
