@@ -1,17 +1,13 @@
 import { Button, Text } from "@chakra-ui/react";
-import { useState } from "react";
+import { useData } from "../Context";
 const Counter = () => {
-  const [counter, setCounter] = useState(0);
+  const { DataState, dispatch } = useData();
   return (
     <div>
       <h2>A dummy Counter Application</h2>
-      <Text size="2xl">{counter}</Text>
-      <Button onClick={() => setCounter((initial) => initial + 1)}>
-        Increment
-      </Button>
-      <Button onClick={() => setCounter((initial) => initial - 1)}>
-        Decrement
-      </Button>
+      <Text size="2xl">{DataState.counter}</Text>
+      <Button onClick={() => dispatch({ type: "INCREMENT" })}>Increment</Button>
+      <Button onClick={() => dispatch({ type: "DECREMENT" })}>Decrement</Button>
     </div>
   );
 };
